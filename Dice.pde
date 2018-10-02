@@ -43,6 +43,7 @@ void setup()
       }
       void roll(){
         roll = (int)(Math.random()*6) + 1;
+        sum = roll + sum;
       }
       void show()
       {
@@ -51,25 +52,21 @@ void setup()
           if(1 == roll){
             fill(0);
             ellipse(myX + 25, myY + 25, 14, 14);
-            sum = sum + 1;
           }else if(2 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
-            sum = sum + 2;
           }else if(3 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 25, myY + 25, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
-            sum = sum + 3;
            }else if(4 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 40, myY + 40, 14, 14);
             ellipse(myX + 10, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
-            sum = sum + 4;
           }else if(5 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
@@ -77,7 +74,6 @@ void setup()
             ellipse(myX + 25, myY + 25, 14, 14);
             ellipse(myX + 10, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
-            sum = sum + 5;
            }else if(6 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
@@ -86,7 +82,6 @@ void setup()
             ellipse(myX + 10, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
             ellipse(myX + 10, myY + 25, 14, 14);
-            sum = sum + 6;
           }
       }
 }
