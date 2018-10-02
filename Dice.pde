@@ -1,4 +1,5 @@
-int sum = 0;
+int sum;
+int roll;
 void setup()
   {
       size(500,500);
@@ -14,6 +15,7 @@ void setup()
       for(int r = 50; r <= 400; r += 50){
         for(int c = 50; c <= 250; c += 50){
           Die die1 = new Die(r, c);
+          die1.roll();
           die1.show();
         }
         System.out.println();
@@ -39,33 +41,36 @@ void setup()
           myX = x;
           myY = y;
       }
+      void roll(){
+        roll = (int)(Math.random()*6) + 1;
+      }
       void show()
       {
           fill(255);
           rect(myX, myY, 50, 50, 7);
-          if(1 == (int)(Math.random()*6) + 1){
+          if(1 == roll){
             fill(0);
             ellipse(myX + 25, myY + 25, 14, 14);
             sum = sum + 1;
-          }else if(2 == (int)(Math.random()*6) + 1){
+          }else if(2 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
             sum = sum + 2;
-          }else if(3 == (int)(Math.random()*6) + 1){
+          }else if(3 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 25, myY + 25, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
             sum = sum + 3;
-           }else if(4 == (int)(Math.random()*6) + 1){
+           }else if(4 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 40, myY + 40, 14, 14);
             ellipse(myX + 10, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
             sum = sum + 4;
-          }else if(5 == (int)(Math.random()*6) + 1){
+          }else if(5 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 40, myY + 40, 14, 14);
@@ -73,7 +78,7 @@ void setup()
             ellipse(myX + 10, myY + 10, 14, 14);
             ellipse(myX + 10, myY + 40, 14, 14);
             sum = sum + 5;
-           }else if(6 == (int)(Math.random()*6) + 1){
+           }else if(6 == roll){
             fill(0);
             ellipse(myX + 40, myY + 10, 14, 14);
             ellipse(myX + 40, myY + 40, 14, 14);
