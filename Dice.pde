@@ -7,7 +7,6 @@ void setup()
   }
   void draw()
   {
-      sum = 0;
       fill(109, 3, 10);
       rect(0, 0, 500, 500);
       fill(10, 108, 3);
@@ -21,8 +20,8 @@ void setup()
         System.out.println();
       }
       fill(255);
-      text("You lose if you get a total below 75.", 50, 330);
-      if(sum < 75){
+      text("You lose if you get a total below 150.", 50, 330);
+      if(sum < 150){
         text("You lost with a total of: " + sum + ". Hand over the dough.", 50, 360);
       }else{
         text("You got a total of: " + sum + ". Congrats you get nothing.", 50, 360);
@@ -31,6 +30,7 @@ void setup()
   void mousePressed()
   {
       redraw();
+      sum = 0;
   }
   class Die //models one single dice cube
   {
