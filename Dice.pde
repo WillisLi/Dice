@@ -17,7 +17,6 @@ void setup()
           die1.roll();
           die1.show();
         }
-        System.out.println();
       }
       fill(255);
       text("You lose if you get a total below 150.", 50, 330);
